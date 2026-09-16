@@ -1,0 +1,41 @@
+# Von Digitalis Estates - End-to-End Azure Architecture
+
+## Architecture Overview
+
+This diagram presents the end-to-end Azure architecture for the Von Digitalis Estates digital platform.
+
+![End-to-End Architecture](end_to_end_architecture.png)
+
+## Key Components
+
+- Users and Devices
+- Channels and Edge Protection
+- API Management and Business Services
+- Events and IoT Processing
+- Data, AI, and Analytics
+- Notifications and Reporting
+- Cross-Cutting Security, Monitoring, and Governance Controls
+
+## Main Flows
+
+1. Visitors and staff access the platform through web, mobile, and operational channels.
+2. Requests are secured by Front Door and API Management.
+3. Business services handle ticketing, profiles, attractions, monitoring, and AI orchestration.
+4. Event-driven processing uses Service Bus, workflows, and streaming components.
+5. IoT devices connect through the Estate Edge Gateway and IoT Hub.
+6. Data is stored in transactional, time-series, and analytical stores.
+7. AI services use Azure OpenAI, AI Search, and machine learning capabilities.
+8. Security, monitoring, and governance controls apply across the platform.
+## Failure Isolation
+
+- Ticketing remains independent of AI recommendations.
+- Edge buffering protects telemetry collection from network interruption.
+- Dead-letter handling isolates unprocessable messages.
+- Rule-based or cached responses provide graceful degradation when AI is unavailable.
+
+## Security and Operational Controls
+
+- Identity and Access controls protect APIs and platform resources.
+- Key Vault stores secrets, certificates, and sensitive configuration.
+- Azure Monitor and Application Insights provide centralized monitoring and observability.
+- Security, privacy, governance, and operational policies apply across all architecture layers.
